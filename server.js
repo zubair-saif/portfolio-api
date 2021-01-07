@@ -21,11 +21,12 @@ if (process.env.NODE_ENV === 'development') {
 app.use(cors());
 
 // Mount routers
-require('./app/media/routesDefinations/mediaRoutesDefs')(app);
-
+// require('./app/media/routesDefinations/mediaRoutesDefs')(app);
+require('./app/skills/routesDefinations/skills.routeDefins')(app);
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 // Connect to database
 connectDB();

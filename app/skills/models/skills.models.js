@@ -6,12 +6,8 @@ const schema = new mongoose.Schema({
         type: String,
         required: true
     },
-    language: {
+    description: {
         type: String,
-    },
-    tools: {
-        type: String,
-
     },
 
 }, {
