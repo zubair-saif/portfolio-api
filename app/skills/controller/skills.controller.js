@@ -1,9 +1,6 @@
 const { Skills } = require('../models/skills.models');
 
-
 module.exports.create = async (req, res) => {
-
-    console.log(req.route, "sssss")
 
 
     const skill = await Skills.create({
@@ -18,7 +15,6 @@ module.exports.create = async (req, res) => {
 
 module.exports.update = async (req, res) => {
 
-
     const skill = await Skills.findByIdAndUpdate(req.params._id,
 
         {
@@ -31,6 +27,4 @@ module.exports.update = async (req, res) => {
     );
     res.save(skill);
     return res.json({ message: "success" });
-
-
 }
