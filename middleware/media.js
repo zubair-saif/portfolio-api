@@ -9,14 +9,6 @@ module.exports.programs = function (req, res, next) {
             }
         })
         let upload = multer({ storage: storage })
-
-        let upload_files = upload.fields([{
-            name: 'main',
-            maxCount: 1
-        }, {
-            name: 'icon',
-            maxCount: 8
-        }]);
         next();
     } catch (error) {
         res.status(400).json({ message: error.message });
